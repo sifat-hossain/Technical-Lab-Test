@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TechnicalLabTest_API\TechnicalLabTest_API.csproj" />
+    <ProjectReference Include="..\TechnicalLabTest_Interface\TechnicalLabTest_Interface.csproj" />
+    <ProjectReference Include="..\TechnicalLabTest_ServiceLayer\TechnicalLabTest_ServiceLayer.csproj" />
+  </ItemGroup>
+
+</Project>
