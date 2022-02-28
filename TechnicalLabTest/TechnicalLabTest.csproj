@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TechnicalLabTest_API\TechnicalLabTest_API.csproj" />
+    <ProjectReference Include="..\TechnicalLabTest_DAL\TechnicalLabTest_DAL.csproj" />
     <ProjectReference Include="..\TechnicalLabTest_Interface\TechnicalLabTest_Interface.csproj" />
     <ProjectReference Include="..\TechnicalLabTest_ServiceLayer\TechnicalLabTest_ServiceLayer.csproj" />
   </ItemGroup>
