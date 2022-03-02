@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TechnicalLabTest_Interface
+namespace TechnicalLabTest_DAL
 {
     public class Class1
     {
