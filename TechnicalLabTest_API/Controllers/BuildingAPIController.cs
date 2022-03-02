@@ -25,6 +25,6 @@ namespace TechnicalLabTest_API.Controllers
         {
             return Ok(await building.GetBuildingList());
         }
-       
+
     }
 }
