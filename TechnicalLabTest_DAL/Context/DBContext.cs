@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using TechnicalLabTest_DAL.DataModel;
+using TechnicalLabTest_DAL.Model;
 
 #nullable disable
 
@@ -20,7 +20,7 @@ namespace TechnicalLabTest_DAL.Context
 
         public virtual DbSet<Building> Buildings { get; set; }
         public virtual DbSet<DataField> DataFields { get; set; }
-        public virtual DbSet<DataModel.Object> Objects { get; set; }
+        public virtual DbSet<Model.Object> Objects { get; set; }
         public virtual DbSet<Reading> Readings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,13 +28,13 @@ namespace TechnicalLabTest_DAL.Context
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-//                optionsBuilder.UseSqlServer("Data Source=TEAMOS-PC\\SQL;Initial Catalog=TechnicalLabTestDB;user id=sa;password=sifat123;");
+//                optionsBuilder.UseSqlServer("Data Source=DESKTOP-PPNI8E1\\SQL;Initial Catalog=TechnicalLabTestDB;user id=sa;password=sifat123;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AI");
+            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
             modelBuilder.Entity<Building>(entity =>
             {
@@ -62,7 +62,7 @@ namespace TechnicalLabTest_DAL.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<DataModel.Object>(entity =>
+            modelBuilder.Entity<Model.Object>(entity =>
             {
                 entity.ToTable("Object");
 
