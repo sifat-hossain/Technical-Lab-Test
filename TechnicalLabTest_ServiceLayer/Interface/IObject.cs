@@ -7,8 +7,9 @@ using TechnicalLabTest_ServiceLayer.ViewModel;
 
 namespace TechnicalLabTest_ServiceLayer.Interface
 {
-  public interface IObject
+    //this interface is inherited with "ObjectServiceLayer" of "TechnicalLabTest_ServiceLayer.ServiceLayer"
+    public interface IObject
     {
-        Task<List<ObjectViewModel>> GetObjectList();
+        Task<List<ObjectViewModel>> GetObjectList(); //declare the method of retriving Object list
     }
 }

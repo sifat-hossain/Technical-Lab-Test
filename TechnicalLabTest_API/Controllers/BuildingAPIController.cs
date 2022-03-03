@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TechnicalLabTest_API.ViewModel;
 using TechnicalLabTest_ServiceLayer.Interface;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 
 namespace TechnicalLabTest_API.Controllers
 {
@@ -19,11 +19,12 @@ namespace TechnicalLabTest_API.Controllers
         {
             building = _building;
         }
-        // GET: api/<BuildingAPIController>
+        
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await building.GetBuildingList());
+            return Ok(await building.GetBuildingList()); //Get full list of Building.                                              
+                                                         //it is calling the "GetBuildingList()" method from "TechnicalLabTest_ServiceLayer.Interface"
         }
 
     }

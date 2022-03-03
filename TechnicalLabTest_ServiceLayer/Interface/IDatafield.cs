@@ -7,8 +7,9 @@ using TechnicalLabTest_ServiceLayer.ViewModel;
 
 namespace TechnicalLabTest_ServiceLayer.Interface
 {
+    //this interface is inherited with "DataField" of "TechnicalLabTest_ServiceLayer.ServiceLayer"
     public interface IDatafield
     {
-        Task<List<DatafieldViewModel>> GetDatafieldList();
+        Task<List<DatafieldViewModel>> GetDatafieldList(); //declare the method of retriving Data field list
     }
 }

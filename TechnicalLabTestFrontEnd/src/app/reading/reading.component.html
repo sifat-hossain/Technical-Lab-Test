@@ -7,12 +7,15 @@
           <mat-card-content>
             <form class="example-form">
               <mat-label>Favorite Food</mat-label>
-              <mat-form-field appearance="fill">
-  <mat-select >
-    <mat-option></mat-option>
-    <mat-option>iewValue</mat-option>
-  </mat-select>
-</mat-form-field>
+   <select>
+     <option>
+       value
+     </option>
+     <option *ngFor="let building of buildingList">
+     {{building.Name}}
+    </option>
+   </select>
+  
               <table class="example-full-width" cellspacing="0"><tr>
                 <td><mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>City</mat-label>
@@ -74,3 +77,5 @@
           <h1>Angular Material Date Range Picker Demo</h1>  
           
         </div>  -->
+
+        

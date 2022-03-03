@@ -7,8 +7,10 @@ using TechnicalLabTest_API.ViewModel;
 
 namespace TechnicalLabTest_ServiceLayer.Interface
 {
-   public interface IBuilding
+    //this interface is inherited with "BuildingServiceLayer" of "TechnicalLabTest_ServiceLayer.ServiceLayer"
+    public interface IBuilding
     {
-        Task<List<BuildingViewModel>> GetBuildingList();
+        Task<List<BuildingViewModel>> GetBuildingList(); //declare the method of retriving building list.
+                                                         
     }
 }
