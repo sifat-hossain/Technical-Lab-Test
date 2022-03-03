@@ -45,6 +45,7 @@ namespace TechnicalLabTest_API
             services.AddTransient<IBuilding, BuildingServiceLayer>();
             services.AddTransient<IObject, ObjectServiceLayer>();
             services.AddTransient<IDatafield, DataFieldServiceLayer>();
+            services.AddTransient<IReading, ReadingServiceLayer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,25 +1,76 @@
 
-         <div class="container">
-             <div class="card-header"> 
-                 <div>
-                     <div class="form-inline row">
-            <select class="form-control col-md-6">
-                <option>Select State</option>
-                <option >
-                  name
-                 </option>
-            </select>
+         <mat-card class="example-card">
+          <mat-card-header>
+           
+            <mat-card-title>Shiba Inu</mat-card-title>        
+          </mat-card-header>       
+          <mat-card-content>
+            <form class="example-form">
+              <mat-label>Favorite Food</mat-label>
+              <mat-form-field appearance="fill">
+  <mat-select >
+    <mat-option></mat-option>
+    <mat-option>iewValue</mat-option>
+  </mat-select>
+</mat-form-field>
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>City</mat-label>
+                  <input class="form-control" matInput placeholder="Ex. San Francisco">
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>State</mat-label>
+                  <input matInput placeholder="Ex. California">
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Postal Code</mat-label>
+                  <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+                  <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                </mat-form-field></td>
+              </tr></table>
+            </form>
+            <div class="json">  
+              <h2>Integrated Form JSON</h2>  
+              <code><pre>{{rangeFormGroup.value | json}}</pre></code>  
+            </div>  
+          </mat-card-content>
           
-            <select class="form-control">
-              <option>Select City</option>
-              <option >name</option>
-          </select>
-          <select class="form-control">
-            <option>Select City</option>
-            <option >name</option>
-        </select>
+        </mat-card> 
+
+
+    
+    <!--  <mat-card class="example-card">
+        <mat-card-header>
+         
+          <mat-card-title>Shiba Inu</mat-card-title>        
+        </mat-card-header>       
+        <mat-card-content>
+          <form [formGroup]="rangeFormGroup">  
+            <div style="background-color:rgb(197, 185, 185); width: fit-content;color: black;" class="form-control">  
+              <input matInput placeholder="Ex. California">
+              <mat-form-field> 
+                 
+                <mat-label>Enter a date range</mat-label>  
+                <mat-date-range-input [rangePicker]="picker">  
+                  <input matStartDate placeholder="Start date" formControlName="start">  
+                  <input matEndDate placeholder="End date" formControlName="end">  
+                </mat-date-range-input>  
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>  
+                <mat-date-range-picker #picker></mat-date-range-picker>  
+               
+              </mat-form-field>  
+            </div>  
+          </form>  
+          <div class="json">  
+            <h2>Integrated Form JSON</h2>  
+            <code><pre>{{rangeFormGroup.value | json}}</pre></code>  
+          </div>  
+        </mat-card-content>
         
-        </div>
-        </div>
-          </div>
-        </div>
+      </mat-card> 
+   
+        
+        <div class="container" >  
+          <h1>Angular Material Date Range Picker Demo</h1>  
+          
+        </div>  -->
